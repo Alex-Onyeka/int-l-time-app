@@ -13,9 +13,11 @@ class _HomeState extends State<Home> {
 
   @override
   void didChangeDependencies() {
-    super.didChangeDependencies(); // Call parent class method
+    super
+        .didChangeDependencies(); // Call parent class method
 
-    time = ModalRoute.of(context)!.settings.arguments as TimeClass;
+    time = ModalRoute.of(context)!.settings.arguments
+        as TimeClass;
   }
 
   @override
@@ -75,22 +77,27 @@ class _HomeState extends State<Home> {
               SizedBox(height: 20),
               TextButton.icon(
                 style: TextButton.styleFrom(
-                  backgroundColor: const Color.fromARGB(
-                      221, 1, 51, 92), // Set background color
-                  foregroundColor: Colors.white, // Set text color
+                  backgroundColor: const Color.fromARGB(221,
+                      1, 51, 92), // Set background color
+                  foregroundColor:
+                      Colors.white, // Set text color
                   padding: EdgeInsets.symmetric(
-                      vertical: 12, horizontal: 24), // Add padding
+                      vertical: 12,
+                      horizontal: 24), // Add padding
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8), // Rounded corners
+                    borderRadius: BorderRadius.circular(
+                        8), // Rounded corners
                   ),
                 ),
                 onPressed: () {
                   Navigator.pushNamed(context, '/location');
                 },
                 label: Text(
-                    style: TextStyle(color: Colors.white), 'Set Location.'),
+                    style: TextStyle(color: Colors.white),
+                    'Set Location'),
                 icon: Icon(
-                    color: Colors.grey.shade100, Icons.location_on_outlined),
+                    color: Colors.grey.shade100,
+                    Icons.location_on_outlined),
               ),
               SizedBox(height: 20),
             ],
